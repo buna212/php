@@ -65,14 +65,19 @@
 //     $numrii++;
 // }while($numberii <=5)
 
-for ($x=0; $x<=10){
-    echo "the number is $x";
+for ($x=0; $x<=10; $x++){
+   echo "the number is $x <hr>";
+} 
+
+$cars = array ("FERRARI" , "PORSHE" , "BUGATI" , "LAMBO");
+foreach ($cars as $value){
+echo "$value <hr>";         
 }
 
-
-
-
-
+$age = array("jora"=>"14" , "buna"=>"13" , "lum"=>"0.5muj" );
+foreach ($age as $x => $mosha){
+echo "$x = $mosha <hr>";
+}
 
 
  ?>  
