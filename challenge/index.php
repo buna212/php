@@ -24,43 +24,51 @@
 //         echo "PERSONI NUK MUND TE VOTON ";
 // }
 
- $nr = 5;
+//  $nr = 5;
 
- switch($nr) {
-        case  1 ;
-        echo "it is monday,you made a mistake finishing the weekend";
-        break;
+//  switch($nr) {
+//         case  1 ;
+//         echo "it is monday,you made a mistake finishing the weekend";
+//         break;
 
-       case  2;
-        echo "it is tuesday , you finished the worst day";
-        break;
+//        case  2;
+//         echo "it is tuesday , you finished the worst day";
+//         break;
 
-             case  3;
-        echo "it is Wednesday , middle of the week";
-       break;
+//              case  3;
+//         echo "it is Wednesday , middle of the week";
+//        break;
 
-             case  4;
-        echo "it is Thursday , almost there";
-       break;
+//              case  4;
+//         echo "it is Thursday , almost there";
+//        break;
 
-             case  5;
-        echo "it is Friday , done for the day";
-       break;
+//              case  5;
+//         echo "it is Friday , done for the day";
+//        break;
 
-             case  6;
-       echo "it is saturday, free day";
-       break;
+//              case  6;
+//        echo "it is saturday, free day";
+//        break;
 
-             case 7;
-       echo "it is Sunday , back to monday";
-        break;
+//              case 7;
+//        echo "it is Sunday , back to monday";
+//         break;
 
-        default:
-       echo "error";
-      break;
+//         default:
+//        echo "error";
+//       break;
 
 
-}
+// }
+
+
+
+$numriiiiiiiiii = array(27 , 2 , 11);
+
+$mesi = array_sum($numriiiiiiiiii)/3;
+
+echo $mesi;
 
 
 
