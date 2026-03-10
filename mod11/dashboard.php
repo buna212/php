@@ -33,7 +33,7 @@ $users = $getUsers ->fetchAll();
     background-color : pink;
    }
 
-   <form>inout{
+   form,input{
     margin : 10px;
     font-size :20;
     padding :5px;
@@ -54,31 +54,21 @@ $users = $getUsers ->fetchAll();
   <th> USERNAME </th>
      <th>  PASWORD </th>
 </tr>
-<?php 
-
-foreach ($users as $user) { ?>
- <tr>
-   <td><?php echo $user ['id'];?></td>
-
-   <td><?php echo $user ['username'];?></td>
-   
-   <td><?php echo $user ['password'];?></td>
-
-   <td><?="<a href='delete.php?id=$user[id]'>DELETE</a>"?></td>
-</tr>
-<?php } ?>
+ <?php
+        foreach($users as $user){ ?>
+            <tr>
+            <td><?= $user['id']; ?></td>
+            <td><?= $user['username']; ?></td>
+            <td><?= $user['password']; ?></td>
+            <td><?= "<a href='delete.php?id=$user[id]'>Delete</a>"?></td>
+            <td><?= "<a href='update.php?id=$user[id]'>Update</a>"?></td>
+            </tr>
+        <?php } ?>
 
 
 
 </table>
-        <form>
-        <input type="hidden" name="id" value="<?php echo users[$id]?>"<br>
-        <input type="hidden" name="id" value ="<?php echo users[$username]?>"<br>
-        <input type="hidden" name:"id" value :"<?php echo users[$id]?>"<br>
-        <input type="hidden" name:"id" value :"<?php echo users[$id]?>"<br>
-
-
-</form>
+   
 
 
 

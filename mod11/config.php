@@ -5,7 +5,7 @@ session_start();
 $host="localhost";
 $user="root";
 $pass="";
-$dbname="testtbunaa";
+$dbname="testbuna";
 
 
 try {
