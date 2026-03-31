@@ -3,114 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SIGN UP !!!</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Register</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
 </head>
 <body>
     
- <?php include 'header.php';?>
+<?php include("header.php") ?>
+<section class="vh-100" style="background-color: #000000ff; color:white;">
+  <div class="container h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-lg-12 col-xl-11">
+        <div class="card text-black" style="border-radius: 25px;">
+          <div class="card-body p-md-5">
+            <div class="row justify-content-center">
+              <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
 
-<section class="vh-100 gradient-custom">
-  <div class="container py-5 h-100">
-    <div class="row justify-content-center align-items-center h-100">
-      <div class="col-12 col-lg-9 col-xl-7">
-        <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
-          <div class="card-body p-4 p-md-5">
-            <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Registration Form</h3>
-            <form>
+                <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4" style="color:white;">Sign up</p>
 
-              <div class="row">
-                <div class="col-md-6 mb-4">
+                <form class="mx-1 mx-md-4">
 
-                  <div data-mdb-input-init class="form-outline">
-                    <input type="text" id="firstName" class="form-control form-control-lg" />
-                    <label class="form-label" for="firstName">First Name</label>
+                  <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                    <div data-mdb-input-init class="form-outline flex-fill mb-0">
+                      <input type="text" id="form3Example1c" class="form-control" />
+                      <label class="form-label" for="form3Example1c" style="color:white;">Your Name</label>
+                    </div>
                   </div>
 
-                </div>
-                <div class="col-md-6 mb-4">
-
-                  <div data-mdb-input-init class="form-outline">
-                    <input type="text" id="lastName" class="form-control form-control-lg" />
-                    <label class="form-label" for="lastName">Last Name</label>
+                  <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                    <div data-mdb-input-init class="form-outline flex-fill mb-0">
+                      <input type="email" id="form3Example3c" class="form-control" />
+                      <label class="form-label" for="form3Example3c" style="color:white;">Your Email</label>
+                    </div>
                   </div>
 
-                </div>
+                  <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                    <div data-mdb-input-init class="form-outline flex-fill mb-0">
+                      <input type="password" id="form3Example4c" class="form-control" />
+                      <label class="form-label" for="form3Example4c" style="color:white;">Password</label>
+                    </div>
+                  </div>
+
+                  <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-key fa-lg me-3 fa-fw"></i>
+                    <div data-mdb-input-init class="form-outline flex-fill mb-0">
+                      <input type="password" id="form3Example4cd" class="form-control" />
+                      <label class="form-label" for="form3Example4cd" style="color:white;" >Repeat your password</label>
+                    </div>
+                  </div>
+
+                  <div class="form-check d-flex justify-content-center mb-5">
+                    <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3c" />
+                    <label class="form-check-label" for="form2Example3" style="color:white;">
+                      I agree all statements in <a href="#!">Terms of service</a>
+                    </label>
+                  </div>
+
+                  <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                    <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-lg">Register</button>
+                  </div>
+
+                </form>
+
               </div>
+              <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
 
-              <div class="row">
-                <div class="col-md-6 mb-4 d-flex align-items-center">
+                <img src="img/draw1.webp"
+                  class="img-fluid" alt="Sample image">
 
-                  <div data-mdb-input-init class="form-outline datepicker w-100">
-                    <input type="text" class="form-control form-control-lg" id="birthdayDate" />
-                    <label for="birthdayDate" class="form-label">Birthday</label>
-                  </div>
-
-                </div>
-                <div class="col-md-6 mb-4">
-
-                  <h6 class="mb-2 pb-1">Gender: </h6>
-
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="femaleGender"
-                      value="option1" checked />
-                    <label class="form-check-label" for="femaleGender">Female</label>
-                  </div>
-
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="maleGender"
-                      value="option2" />
-                    <label class="form-check-label" for="maleGender">Male</label>
-                  </div>
-
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="otherGender"
-                      value="option3" />
-                    <label class="form-check-label" for="otherGender">Other</label>
-                  </div>
-
-                </div>
               </div>
-
-              <div class="row">
-                <div class="col-md-6 mb-4 pb-2">
-
-                  <div data-mdb-input-init class="form-outline">
-                    <input type="email" id="emailAddress" class="form-control form-control-lg" />
-                    <label class="form-label" for="emailAddress">Email</label>
-                  </div>
-
-                </div>
-                <div class="col-md-6 mb-4 pb-2">
-
-                  <div data-mdb-input-init class="form-outline">
-                    <input type="tel" id="phoneNumber" class="form-control form-control-lg" />
-                    <label class="form-label" for="phoneNumber">Phone Number</label>
-                  </div>
-
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col-12">
-
-                  <select class="select form-control-lg">
-                    <option value="1" disabled>Choose option</option>
-                    <option value="2">Subject 1</option>
-                    <option value="3">Subject 2</option>
-                    <option value="4">Subject 3</option>
-                  </select>
-                  <label class="form-label select-label">Choose option</label>
-
-                </div>
-              </div>
-
-              <div class="mt-4 pt-2">
-                <input data-mdb-ripple-init class="btn btn-primary btn-lg" type="submit" value="Submit" />
-              </div>
-
-            </form>
+            </div>
           </div>
         </div>
       </div>
@@ -118,7 +83,8 @@
   </div>
 </section>
 
- <?php include 'footer.php';?>
+
+<?php include("footer.php") ?>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
