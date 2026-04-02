@@ -1,7 +1,9 @@
 <?php
-   session_start();
+    session_start();
 
-    include_once 'config.php';
+
+    include_once('config.php');
+
 
     if(isset($_POST['submit'])){
         $username = $_POST['username'];
@@ -9,38 +11,42 @@
 
 
         if(empty($username) || empty($password)){
-            echo "Please fill in all fields!";
-        } 
-    }
+            echo "Please fill in all fields";
+        }
         else {
-            $sql = "select id , emri , username , password, is admin from users where username='$username" ;
-            
+            $sql = "select id, emri, username, password, is_admin from users where username = :username";
+
+
             $selectUser = $conn->prepare($sql);
 
-            $selectUser->bindParam(':username', $username);
+
+            $selectUser->bindParam(":username", $username);
+
 
             $selectUser->execute();
 
+
             $data = $selectUser->fetch();
 
+
             if($data == false){
-                echo "Invalid username or password!";
+                echo "The user does not exist";
             }
-                 else {
-                if(password_verify($password, $data['password'])){
+            else {
+                if(password_verify($password, $data['password'])) {
                     $_SESSION['id'] = $data['id'];
                     $_SESSION['username'] = $data['username'];
                     $_SESSION['email'] = $data['email'];
                     $_SESSION['emri'] = $data['emri'];
                     $_SESSION['is_admin'] = $data['is_admin'];
 
-                    header("Location: dashboard.php");
-                } else {
-                    echo " The password you entered is incorrect!";
+
+                    header('Location: dashboard.php');
                 }
-                    }
-            
-}
-        
-    
+               else {
+                echo "The password is not valid";
+               }
+            }
+        }
+    }
 ?>
